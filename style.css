@@ -1,5 +1,118 @@
-p {
-  color: red;
+#pizza {
+  background-color: royalblue;
+  border: #2149c1 5px solid;
+  border-radius: 20px;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.create-div {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stack-flex-div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.size-panel {
+  display: block;
+  border: black 2px solid;
+  background-color: #fcedda;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0;
+  height: 20%;
+}
+
+.sauce-panel {
+  display: block;
+  border: #970f00 2px solid;
+  border-radius: 10px;
+  background-color: #b72f20;
+  padding: 10px;
+  height: 20%;
+}
+
+.default-pizza-panel {
+  display: block;
+  border: 2px solid #77360e;
+  border-radius: 10px;
+  background-color: #9c562e;
+  padding: 10px;
+  height: 20%;
+}
+
+.deal-panel {
+  display: block;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: #181836;
+  padding: 10px;
+  height: 30%;
+}
+
+.topping-panel {
+  display: block;
+  background-color: #ce934b;
+  border: brown 5px solid;
+  padding: 10px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.pizza-image-holder {
+  display: block;
+  width: 325px;
+  height: 525px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  position: relative;
+}
+
+.pizza-image {
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+.pizza-image[id=dough] {
+  z-index: 1;
+}
+.pizza-image[id=sauce] {
+  z-index: 2;
+}
+.pizza-image[id=cheese] {
+  z-index: 3;
+}
+.pizza-image[id=topping] {
+  display: none;
+  z-index: 4;
+}
+
+.order-button {
+  background-color: #181836;
+  color: #fcedda;
+  border: 3px solid #b72f20;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #cccc00;
+}
+
+h3 {
+  color: #cccc00;
 }
 
 /*# sourceMappingURL=style.css.map */
