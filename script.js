@@ -95,6 +95,24 @@ var porkLabel = document.createElement("label");
 var tomatoLabel = document.createElement("label");
 
 
+var LRLabels = [];
+for(var i = 0; i <= 47; i++){
+    var tempLR = document.createElement("label");
+    if(i%3 == 0)
+    {
+        tempLR.innerHTML = "+";
+    }
+    else if(i%3 == 1){
+        tempLR.innerHTML = "R";
+
+    }
+    else{
+        tempLR.innerHTML = "L";
+    }
+    LRLabels.splice(0,0,tempLR);
+    console.log(tempLR.innerHTML);
+}
+
 var baconExtra = document.createElement("input");
 baconExtra.setAttribute("type", "checkbox");
 baconExtra.setAttribute("name", "bacon");
@@ -114,6 +132,8 @@ var baconRight = document.createElement("input");
 baconRight.setAttribute("type", "checkbox");
 baconRight.setAttribute("name", "bacon");
 baconRight.setAttribute("value", "bacon-right");
+LRLabels[0].setAttribute("for", "bacon-left");
+LRLabels[1].setAttribute("for", "bacon-right");
 var bananaPepperExtra = document.createElement("input");
 bananaPepperExtra.setAttribute("type", "checkbox");
 bananaPepperExtra.setAttribute("name", "banana-pepper");
@@ -133,6 +153,8 @@ var bananaPepperRight = document.createElement("input");
 bananaPepperRight.setAttribute("type", "checkbox");
 bananaPepperRight.setAttribute("name", "banana-pepper");
 bananaPepperRight.setAttribute("value", "banana-pepper-right");
+LRLabels[2].setAttribute("for", "banana-pepper-left");
+LRLabels[3].setAttribute("for", "banana-pepper-right");
 var beefExtra = document.createElement("input");
 beefExtra.setAttribute("type", "checkbox");
 beefExtra.setAttribute("name", "beef");
@@ -152,6 +174,9 @@ var beefRight = document.createElement("input");
 beefRight.setAttribute("type", "checkbox");
 beefRight.setAttribute("name", "beef");
 beefRight.setAttribute("value", "beef-right");
+LRLabels[4].setAttribute("for", "beef-left");
+LRLabels[5].setAttribute("for", "beef-right");
+
 var chickenExtra = document.createElement("input");
 chickenExtra.setAttribute("type", "checkbox");
 chickenExtra.setAttribute("name", "chicken");
@@ -171,6 +196,9 @@ var chickenRight = document.createElement("input");
 chickenRight.setAttribute("type", "checkbox");
 chickenRight.setAttribute("name", "chicken");
 chickenRight.setAttribute("value", "chicken-right");
+LRLabels[6].setAttribute("for", "chicken-left");
+LRLabels[7].setAttribute("for", "chicken-right");
+
 var greenBellPepperExtra = document.createElement("input");
 greenBellPepperExtra.setAttribute("type", "checkbox");
 greenBellPepperExtra.setAttribute("name", "green-bell-pepper");
@@ -191,6 +219,9 @@ var greenBellPepperRight = document.createElement("input");
 greenBellPepperRight.setAttribute("type", "checkbox");
 greenBellPepperRight.setAttribute("name", "green-bell-pepper");
 greenBellPepperRight.setAttribute("value", "green-bell-pepper-right");
+LRLabels[8].setAttribute("for", "green-bell-pepper-left");
+LRLabels[9].setAttribute("for", "green-bell-pepper-right");
+
 var hamExtra = document.createElement("input");
 hamExtra.setAttribute("type", "checkbox");
 hamExtra.setAttribute("name", "ham");
@@ -210,6 +241,9 @@ var hamRight = document.createElement("input");
 hamRight.setAttribute("type", "checkbox");
 hamRight.setAttribute("name", "ham");
 hamRight.setAttribute("value", "ham-right");
+LRLabels[10].setAttribute("for", "ham-left");
+LRLabels[11].setAttribute("for", "ham-right");
+
 var italianSausageExtra = document.createElement("input");
 italianSausageExtra.setAttribute("type", "checkbox");
 italianSausageExtra.setAttribute("name", "italian-sausage");
@@ -229,6 +263,9 @@ var italianSausageRight = document.createElement("input");
 italianSausageRight.setAttribute("type", "checkbox");
 italianSausageRight.setAttribute("name", "italian-sausage");
 italianSausageRight.setAttribute("value", "italian-sausage-right");
+LRLabels[12].setAttribute("for", "italian-sausage-left");
+LRLabels[13].setAttribute("for", "italian-sausage-right");
+
 var jalepenoExtra = document.createElement("input");
 jalepenoExtra.setAttribute("type", "checkbox");
 jalepenoExtra.setAttribute("name", "jalepeno");
@@ -248,6 +285,9 @@ var jalepenoRight = document.createElement("input");
 jalepenoRight.setAttribute("type", "checkbox");
 jalepenoRight.setAttribute("name", "jalepeno");
 jalepenoRight.setAttribute("value", "jalepeno-right");
+LRLabels[14].setAttribute("for", "jalepeno-left");
+LRLabels[15].setAttribute("for", "jalepeno-right");
+
 var meatballExtra = document.createElement("input");
 meatballExtra.setAttribute("type", "checkbox");
 meatballExtra.setAttribute("name", "meatball");
@@ -267,6 +307,9 @@ var meatballRight = document.createElement("input");
 meatballRight.setAttribute("type", "checkbox");
 meatballRight.setAttribute("name", "meatball");
 meatballRight.setAttribute("value", "meatball-right");
+LRLabels[16].setAttribute("for", "meatball-left");
+LRLabels[17].setAttribute("for", "meatball-right");
+
 var mushroomExtra = document.createElement("input");
 mushroomExtra.setAttribute("type", "checkbox");
 mushroomExtra.setAttribute("name", "mushroom");
@@ -286,6 +329,9 @@ var mushroomRight = document.createElement("input");
 mushroomRight.setAttribute("type", "checkbox");
 mushroomRight.setAttribute("name", "mushroom");
 mushroomRight.setAttribute("value", "mushroom-right");
+LRLabels[18].setAttribute("for", "mushroom-left");
+LRLabels[19].setAttribute("for", "mushroom-right");
+
 var olivesExtra = document.createElement("input");
 olivesExtra.setAttribute("type", "checkbox");
 olivesExtra.setAttribute("name", "olives");
@@ -305,6 +351,9 @@ var olivesRight = document.createElement("input");
 olivesRight.setAttribute("type", "checkbox");
 olivesRight.setAttribute("name", "olives");
 olivesRight.setAttribute("value", "olives-right");
+LRLabels[20].setAttribute("for", "olives-left");
+LRLabels[21].setAttribute("for", "olives-right");
+
 var onionExtra = document.createElement("input");
 onionExtra.setAttribute("type", "checkbox");
 onionExtra.setAttribute("name", "onion");
@@ -324,6 +373,9 @@ var onionRight = document.createElement("input");
 onionRight.setAttribute("type", "checkbox");
 onionRight.setAttribute("name", "onion");
 onionRight.setAttribute("value", "onion-right");
+LRLabels[22].setAttribute("for", "onion-left");
+LRLabels[23].setAttribute("for", "onion-right");
+
 var pepperoniExtra = document.createElement("input");
 pepperoniExtra.setAttribute("type", "checkbox");
 pepperoniExtra.setAttribute("name", "pepperoni");
@@ -343,6 +395,9 @@ var pepperoniRight = document.createElement("input");
 pepperoniRight.setAttribute("type", "checkbox");
 pepperoniRight.setAttribute("name", "pepperoni");
 pepperoniRight.setAttribute("value", "pepperoni-right");
+LRLabels[24].setAttribute("for", "pepperoni-left");
+LRLabels[25].setAttribute("for", "pepperoni-right");
+
 var pineappleExtra = document.createElement("input");
 pineappleExtra.setAttribute("type", "checkbox");
 pineappleExtra.setAttribute("name", "pineapple");
@@ -362,6 +417,9 @@ var pineappleRight = document.createElement("input");
 pineappleRight.setAttribute("type", "checkbox");
 pineappleRight.setAttribute("name", "pineapple");
 pineappleRight.setAttribute("value", "pineapple-right");
+LRLabels[26].setAttribute("for", "pineapple-left");
+LRLabels[27].setAttribute("for", "pineapple-right");
+
 var porkExtra = document.createElement("input");
 porkExtra.setAttribute("type", "checkbox");
 porkExtra.setAttribute("name", "pork");
@@ -381,6 +439,9 @@ var porkRight = document.createElement("input");
 porkRight.setAttribute("type", "checkbox");
 porkRight.setAttribute("name", "pork");
 porkRight.setAttribute("value", "pork-right");
+LRLabels[28].setAttribute("for", "pork-left");
+LRLabels[29].setAttribute("for", "pork-right");
+
 var tomatoExtra = document.createElement("input");
 tomatoExtra.setAttribute("type", "checkbox");
 tomatoExtra.setAttribute("name", "tomato");
@@ -400,6 +461,9 @@ var tomatoRight = document.createElement("input");
 tomatoRight.setAttribute("type", "checkbox");
 tomatoRight.setAttribute("name", "tomato");
 tomatoRight.setAttribute("value", "tomato-right");
+LRLabels[30].setAttribute("for", "tomato-left");
+LRLabels[31].setAttribute("for", "tomato-right");
+
 
 //pizza image
 pizzaDiv.setAttribute("class", "pizza-image-holder");
@@ -476,6 +540,23 @@ createDiv.appendChild(stackFlexDiv);
 pizzaMaker.appendChild(pizzaDiv);
 pizzaDiv.appendChild(pizza);
 pizzaMaker.appendChild(createDiv);
+stackFlexDiv.append(defaultPizzas)
+createDiv.appendChild(stackFlexDiv);
+defaultPizzas.append(defaultCowboy);
+defaultPizzas.append(defaultCowboyLabel);
+defaultPizzas.append(defaultVegan);
+defaultPizzas.append(defaultVeganLabel);
+defaultPizzas.append(defaultMeatLovers);
+defaultPizzas.append(defaultMeatLoversLabel);
+defaultPizzas.append(defaultEverything);
+defaultPizzas.append(defaultEverythingLabel);
+defaultPizzas.append(defaultMrVella);
+defaultPizzas.append(defaultMrVellaLabel);
+createDiv.append(dealDiv);
+createDiv.append(dealDiv);
+dealDiv.setAttribute("class", "deal-panel")
+dealDiv.appendChild(deal);
+dealDiv.appendChild(price);
 //size
 stackFlexDiv.appendChild(sizePanel);
 sizePanel.appendChild(smallPizza);
@@ -502,114 +583,152 @@ saucePanel.append(document.createElement("br"));
 saucePanel.append(addCheese);
 saucePanel.append(addCheeseLabel);
 
-stackFlexDiv.append(defaultPizzas)
-createDiv.appendChild(stackFlexDiv);
-defaultPizzas.append(defaultCowboy);
-defaultPizzas.append(defaultCowboyLabel);
-defaultPizzas.append(defaultVegan);
-defaultPizzas.append(defaultVeganLabel);
-defaultPizzas.append(defaultMeatLovers);
-defaultPizzas.append(defaultMeatLoversLabel);
-defaultPizzas.append(defaultEverything);
-defaultPizzas.append(defaultEverythingLabel);
-defaultPizzas.append(defaultMrVella);
-defaultPizzas.append(defaultMrVellaLabel);
-createDiv.append(dealDiv);
-createDiv.append(dealDiv);
-dealDiv.setAttribute("class", "deal-panel")
-dealDiv.appendChild(deal);
-dealDiv.appendChild(price);
 
 //topping
+
+
+
+
 createDiv.append(toppingPanel)
 toppingPanel.append(baconLeft);
+toppingPanel.append(LRLabels[0]);
 toppingPanel.append(bacon);
 toppingPanel.append(baconRight);
+toppingPanel.append(LRLabels[1]);
 toppingPanel.append(baconExtra);
+toppingPanel.append(LRLabels[2]);
 toppingPanel.append(baconLabel);
 toppingPanel.append(bananaPepperLeft);
+toppingPanel.append(LRLabels[3]);
 toppingPanel.append(bananaPepper);
 toppingPanel.append(bananaPepperRight);
+toppingPanel.append(LRLabels[4]);
 toppingPanel.append(bananaPepperExtra);
+toppingPanel.append(LRLabels[5]);
 toppingPanel.append(bananaPepperLabel);
 toppingPanel.append(bananaPepperLabel);
 toppingPanel.append(document.createElement("br"));
 toppingPanel.append(beefLeft);
+toppingPanel.append(LRLabels[6]);
 toppingPanel.append(beef);
 toppingPanel.append(beefRight);
+toppingPanel.append(LRLabels[7]);
 toppingPanel.append(beefExtra);
+toppingPanel.append(LRLabels[8]);
 toppingPanel.append(beefLabel);
 toppingPanel.append(chickenLeft);
+toppingPanel.append(LRLabels[9]);
 toppingPanel.append(chicken);
 toppingPanel.append(chickenRight);
+toppingPanel.append(LRLabels[10]);
 toppingPanel.append(chickenExtra);
+toppingPanel.append(LRLabels[11]);
 toppingPanel.append(chickenLabel);
 toppingPanel.append(document.createElement("br"));
 toppingPanel.append(greenBellPepperLeft);
+toppingPanel.append(LRLabels[12]);
 toppingPanel.append(greenBellPepper);
 toppingPanel.append(greenBellPepperRight);
+toppingPanel.append(LRLabels[13]);
 toppingPanel.append(greenBellPepperExtra);
+toppingPanel.append(LRLabels[14]);
 toppingPanel.append(greenBellPepperLabel);
 toppingPanel.append(hamLeft);
+toppingPanel.append(LRLabels[15]);
 toppingPanel.append(ham);
 toppingPanel.append(hamRight);
+toppingPanel.append(LRLabels[16]);
 toppingPanel.append(hamExtra);
+toppingPanel.append(LRLabels[17]);
 toppingPanel.append(hamLabel);
 toppingPanel.append(document.createElement("br"));
 toppingPanel.append(italianSausageLeft);
+toppingPanel.append(LRLabels[18]);
 toppingPanel.append(italianSausage);
 toppingPanel.append(italianSausageRight);
+toppingPanel.append(LRLabels[19]);
 toppingPanel.append(italianSausageExtra);
+toppingPanel.append(LRLabels[20]);
 toppingPanel.append(italianSausageLabel);
 toppingPanel.append(jalepenoLeft);
+toppingPanel.append(LRLabels[21]);
 toppingPanel.append(jalepeno);
 toppingPanel.append(jalepenoRight);
+toppingPanel.append(LRLabels[22]);
 toppingPanel.append(jalepenoExtra);
+toppingPanel.append(LRLabels[23]);
 toppingPanel.append(jalepenoLabel);
 toppingPanel.append(document.createElement("br"));
 toppingPanel.append(meatballLeft);
+toppingPanel.append(LRLabels[24]);
 toppingPanel.append(meatball);
 toppingPanel.append(meatballRight);
+toppingPanel.append(LRLabels[25]);
 toppingPanel.append(meatballExtra);
+toppingPanel.append(LRLabels[26]);
 toppingPanel.append(meatballLabel);
 toppingPanel.append(mushroomLeft);
+toppingPanel.append(LRLabels[27]);
 toppingPanel.append(mushroom);
 toppingPanel.append(mushroomRight);
+toppingPanel.append(LRLabels[28]);
 toppingPanel.append(mushroomExtra);
+toppingPanel.append(LRLabels[29]);
 toppingPanel.append(mushroomLabel);
 toppingPanel.append(document.createElement("br"));
 toppingPanel.append(olivesLeft);
+toppingPanel.append(LRLabels[30]);
 toppingPanel.append(olives);
 toppingPanel.append(olivesRight);
+toppingPanel.append(LRLabels[31]);
 toppingPanel.append(olivesExtra);
+toppingPanel.append(LRLabels[32]);
 toppingPanel.append(olivesLabel);
 toppingPanel.append(onionLeft);
+toppingPanel.append(LRLabels[33]);
 toppingPanel.append(onion);
 toppingPanel.append(onionRight);
+toppingPanel.append(LRLabels[34]);
 toppingPanel.append(onionExtra);
+toppingPanel.append(LRLabels[35]);
 toppingPanel.append(onionLabel);
 toppingPanel.append(document.createElement("br"));
 toppingPanel.append(pepperoniLeft);
+toppingPanel.append(LRLabels[36]);
 toppingPanel.append(pepperoni);
 toppingPanel.append(pepperoniRight);
+toppingPanel.append(LRLabels[37]);
 toppingPanel.append(pepperoniExtra);
+toppingPanel.append(LRLabels[38]);
 toppingPanel.append(pepperoniLabel);
 toppingPanel.append(pineappleLeft);
+toppingPanel.append(LRLabels[39]);
 toppingPanel.append(pineapple);
 toppingPanel.append(pineappleRight);
+toppingPanel.append(LRLabels[40]);
 toppingPanel.append(pineappleExtra);
+toppingPanel.append(LRLabels[41]);
 toppingPanel.append(pineappleLabel);
 toppingPanel.append(document.createElement("br"));
 toppingPanel.append(porkLeft);
+toppingPanel.append(LRLabels[42]);
 toppingPanel.append(pork);
 toppingPanel.append(porkRight);
+toppingPanel.append(LRLabels[43]);
 toppingPanel.append(porkExtra);
+toppingPanel.append(LRLabels[44]);
 toppingPanel.append(porkLabel);
 toppingPanel.append(tomatoLeft);
+toppingPanel.append(LRLabels[45]);
 toppingPanel.append(tomato);
 toppingPanel.append(tomatoRight);
+toppingPanel.append(LRLabels[46]);
 toppingPanel.append(tomatoExtra);
+toppingPanel.append(LRLabels[47]);
 toppingPanel.append(tomatoLabel);
+
+
+
 
 //pizza image
 pizzaDiv.append(sauce);
